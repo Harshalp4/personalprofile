@@ -8,7 +8,7 @@ Usage: python3 tools/build.py   (run from anywhere)
 import datetime, pathlib, re, subprocess
 from PIL import Image
 
-SITE = "https://personalprofile-two.vercel.app"   # change to https://harshalpatil.in once the domain is live
+SITE = "https://harshal-r-patil.vercel.app"   # change to https://harshalpatil.in once the domain is live
 SRC = pathlib.Path.home() / "Personal/output/personal-studio"
 OUT = pathlib.Path(__file__).resolve().parent.parent
 

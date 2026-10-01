@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://personalprofile-two.vercel.app/sitemap.xml
+Sitemap: https://harshal-r-patil.vercel.app/sitemap.xml

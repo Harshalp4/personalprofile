@@ -23,6 +23,6 @@
 - Contact: harshal.rpatil5@gmail.com, +91 84548 26644 (WhatsApp)
 
 ## Pages
-- [Profile](https://personalprofile-two.vercel.app/)
-- [Project gallery](https://personalprofile-two.vercel.app/gallery)
-- [CV (PDF)](https://personalprofile-two.vercel.app/assets/harshal-patil-cv.pdf)
+- [Profile](https://harshal-r-patil.vercel.app/)
+- [Project gallery](https://harshal-r-patil.vercel.app/gallery)
+- [CV (PDF)](https://harshal-r-patil.vercel.app/assets/harshal-patil-cv.pdf)
