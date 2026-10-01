@@ -15,7 +15,7 @@ OUT = pathlib.Path(__file__).resolve().parent.parent
 EXCLUDES = ["*.zip", "*verification*.json", "design-notes.md", "asset-manifest.json", "*-prompt.txt",
             "assets/projects/README.md", "assets/*-preview.png", "assets/profile-v2-*.png",
             "assets/project-gallery-*.png", "assets/project-detail-mobile.png", "assets/digitization-*.png",
-            "assets/profile-concept*.png", "assets/personality-assets.md", ".DS_Store"]
+            "assets/profile-concept*.png", "assets/personality-assets.md", ".DS_Store", "case-studies"]
 KEEP = [".git", ".gitignore", ".vercel", "tools", "README.md", "vercel.json"]
 
 def sync():
@@ -34,7 +34,7 @@ def to_webp():
         im.save(png.with_suffix(".webp"), "WEBP", quality=80, method=6)
         png.unlink()
         converted.append(png.relative_to(OUT).as_posix())
-    for f in list(OUT.glob("*.html")) + list(OUT.glob("*.js")) + list(OUT.glob("*.css")):
+    for f in list(OUT.rglob("*.html")) + list(OUT.glob("*.js")) + list(OUT.glob("*.css")):
         t = f.read_text()
         for c in converted:
             t = t.replace(c, c[:-4] + ".webp")
@@ -54,7 +54,7 @@ def og_image():
 def seo_files():
     today = datetime.date.today().isoformat()
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
-    urls = [("/", "1.0"), ("/gallery", "0.8"), ("/assets/harshal-patil-cv.pdf", "0.5")]
+    urls = [("/", "1.0"), ("/work/", "0.9")] + [(f"/work/{p.stem}", "0.8") for p in sorted((OUT / "work").glob("*.html")) if p.stem != "index"] + [("/gallery", "0.7"), ("/assets/harshal-patil-cv.pdf", "0.5")]
     body = "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>{today}</lastmod><priority>{p}</priority></url>\n" for u, p in urls)
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}</urlset>\n')
     (OUT / "llms.txt").write_text(f"""# Harshal Patil
@@ -81,8 +81,15 @@ def seo_files():
 - Engagements: hourly or fixed milestones; team delivery through Bit2Sky India; US contracting through Bit2Sky Inc. USA.
 - Contact: harshalp@bit2sky.com, +91 77100 20095 (WhatsApp)
 
+## Case studies
+- [AI agent platform for local businesses (Revora)]({SITE}/work/revora-ai-growth-platform)
+- [EHR for a US residential care provider]({SITE}/work/ehr-residential-care)
+- [60% faster template loading for a Big Four firm]({SITE}/work/template-authoring-performance)
+- [Presso24 on-demand laundry app]({SITE}/work/presso24-laundry-app)
+
 ## Pages
 - [Profile]({SITE}/)
+- [Case studies]({SITE}/work/)
 - [Project gallery]({SITE}/gallery)
 - [CV (PDF)]({SITE}/assets/harshal-patil-cv.pdf)
 """)

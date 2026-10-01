@@ -1,5 +1,6 @@
 export const projects = {
   revora: {
+    caseStudy: 'work/revora-ai-growth-platform',
     title: 'Revora — AI growth OS', type: 'Founder & architect · 2026',
     intro: 'A multi-tenant platform where AI agents run marketing and sales for local service businesses.',
     points: ['WhatsApp sales agents, a shared inbox, shadow mode, and escalation rules.', 'Research, campaign, creative, review, and AI CMO agents with scheduled publishing and reports.', 'An Approval Centre, role-based access, encrypted secrets, and a full audit log.'],
@@ -7,6 +8,7 @@ export const projects = {
     tags: ['.NET 10', 'Angular 22', 'PostgreSQL', 'Redis', 'Hangfire', 'LLM agents']
   },
   presso: {
+    caseStudy: 'work/presso24-laundry-app',
     title: 'Presso24 — on-demand laundry', type: 'Technology partner · live product',
     intro: 'Built and run the consumer app serving Navi Mumbai, with Flutter apps for iOS and Android.',
     points: ['WhatsApp OTP login and consumer ordering.', 'A .NET and Azure backend for the product.', 'Cohort analytics with Mixpanel to understand customer behavior.'],
@@ -14,6 +16,7 @@ export const projects = {
     tags: ['Flutter', '.NET', 'Azure', 'WhatsApp Business API', 'Mixpanel']
   },
   authoring: {
+    caseStudy: 'work/template-authoring-performance',
     title: 'Template authoring platform', type: 'Enterprise project · Big Four firm',
     intro: 'Hierarchical templates with a drag-and-drop canvas, synchronized tree view, and rule engine.',
     points: ['Angular 19 interfaces with .NET 8 APIs.', 'Incremental retrieval and hierarchical lazy loading for large templates.', 'Redis caching and Azure Functions for supporting workflows.'],

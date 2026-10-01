@@ -85,3 +85,6 @@
 .gallery-type-tile.tile-lilac{background:linear-gradient(150deg,#cfd2ea,#a5aacd)}
 .gallery-type-tile.tile-sand{background:linear-gradient(150deg,#f0e4c8,#d6c29a)}
 .gallery-type-tile.tile-sage{background:linear-gradient(150deg,#cfe0d2,#a3c1aa)}
+
+.dialog-case{display:inline-flex;margin:18px 12px 0 0;min-height:44px;align-items:center}.dialog-case[hidden]{display:none}
+.gallery-case-link{display:inline-block;margin:-8px 0 14px;font-size:13px;font-weight:700;color:#286c75;text-decoration:underline;text-underline-offset:3px}

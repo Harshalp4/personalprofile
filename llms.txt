@@ -22,7 +22,14 @@
 - Engagements: hourly or fixed milestones; team delivery through Bit2Sky India; US contracting through Bit2Sky Inc. USA.
 - Contact: harshalp@bit2sky.com, +91 77100 20095 (WhatsApp)
 
+## Case studies
+- [AI agent platform for local businesses (Revora)](https://harshal-r-patil.vercel.app/work/revora-ai-growth-platform)
+- [EHR for a US residential care provider](https://harshal-r-patil.vercel.app/work/ehr-residential-care)
+- [60% faster template loading for a Big Four firm](https://harshal-r-patil.vercel.app/work/template-authoring-performance)
+- [Presso24 on-demand laundry app](https://harshal-r-patil.vercel.app/work/presso24-laundry-app)
+
 ## Pages
 - [Profile](https://harshal-r-patil.vercel.app/)
+- [Case studies](https://harshal-r-patil.vercel.app/work/)
 - [Project gallery](https://harshal-r-patil.vercel.app/gallery)
 - [CV (PDF)](https://harshal-r-patil.vercel.app/assets/harshal-patil-cv.pdf)

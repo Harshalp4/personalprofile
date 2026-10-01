@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Case Study: Building an On-Demand Laundry App with Flutter and .NET 10 | Harshal Patil</title>
+<meta name="description" content="How I built Presso24, a pickup-and-delivery laundry service in Navi Mumbai: a Flutter customer app, a rider and facility operations app, an Angular admin portal and a .NET 10 API, run on a startup budget.">
+<link rel="canonical" href="https://harshal-r-patil.vercel.app/work/presso24-laundry-app">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Harshal Patil">
+<meta name="theme-color" content="#243e53">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Harshal Patil">
+<meta property="og:url" content="https://harshal-r-patil.vercel.app/work/presso24-laundry-app">
+<meta property="og:title" content="Case Study: Building an On-Demand Laundry App with Flutter and .NET 10 | Harshal Patil">
+<meta property="og:description" content="How I built Presso24, a pickup-and-delivery laundry service in Navi Mumbai: a Flutter customer app, a rider and facility operations app, an Angular admin portal and a .NET 10 API, run on a startup budget.">
+<meta property="og:image" content="https://harshal-r-patil.vercel.app/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23243e53'/%3E%3Ctext x='12' y='44' font-family='Arial' font-size='34' font-weight='bold' fill='%23b5dddd'%3Ehp%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../studio.css">
+<link rel="stylesheet" href="../profile.css">
+<link rel="stylesheet" href="../casestudy.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Building a pickup-and-delivery laundry service from booking to doorstep", "description": "How I built Presso24, a pickup-and-delivery laundry service in Navi Mumbai: a Flutter customer app, a rider and facility operations app, an Angular admin portal and a .NET 10 API, run on a startup budget.", "image": "https://harshal-r-patil.vercel.app/assets/og-image.jpg", "author": {"@type": "Person", "@id": "https://harshal-r-patil.vercel.app/#person", "name": "Harshal Patil", "url": "https://harshal-r-patil.vercel.app/"}, "publisher": {"@type": "Person", "@id": "https://harshal-r-patil.vercel.app/#person", "name": "Harshal Patil"}, "datePublished": "2026-10-01", "dateModified": "2026-10-01", "mainEntityOfPage": "https://harshal-r-patil.vercel.app/work/presso24-laundry-app", "about": ["Flutter app development", ".NET 10", "on-demand service app", "laundry app", "PostgreSQL"], "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://harshal-r-patil.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Case studies", "item": "https://harshal-r-patil.vercel.app/work/"}, {"@type": "ListItem", "position": 3, "name": "Presso24: on-demand laundry", "item": "https://harshal-r-patil.vercel.app/work/presso24-laundry-app"}]}]}</script>
+</head>
+<body class="profile-v2 cs-page">
+<a class="skip" href="#main">Skip to content</a>
+<aside class="sidebar">
+<a class="brand" href="../" aria-label="Harshal Patil home">h<span>p</span></a>
+<div class="identity"><strong>Harshal Patil</strong><span>Engineer. Builder. Co-founder.</span></div>
+<nav aria-label="Profile">
+<a href="../"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-8H9v8H4a1 1 0 0 1-1-1z"/></svg></span>Overview</a>
+<a class="active" aria-current="page" href="./"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3H5v18h14V9zm0 0v6h6M8 13h8m-8 4h6"/></svg></span>Case studies</a>
+<a href="../gallery"><span aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg></span>Gallery</a>
+<a href="../#contact"><span aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>Let’s talk</a>
+</nav>
+<div class="sidebar-note">
+<span class="tiny-label">BASED IN MUMBAI, INDIA</span>
+<p>From a business problem<br>to a running product.</p>
+<a href="../assets/harshal-patil-cv.pdf" download="Harshal-Patil-CV.pdf" class="sidebar-cv"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg></span>Download my CV</a>
+</div>
+</aside>
+<main id="main">
+<nav class="cs-crumbs" aria-label="Breadcrumb"><a href="../">Home</a><span aria-hidden="true">/</span><a href="./">Case studies</a><span aria-hidden="true">/</span><span aria-current="page">Presso24: on-demand laundry</span></nav>
+<article class="cs-article">
+<header class="cs-hero clay">
+<div class="cs-hero-copy">
+<span class="eyebrow">CONSUMER PRODUCT · CASE STUDY</span><span class="cs-status">Live on Android</span>
+<h1>Building a pickup-and-delivery laundry service from booking to doorstep</h1>
+<p class="cs-lede">Presso24 needed a complete system for a new laundry service in Navi Mumbai: a customer app to book pickups, an app for riders and facility staff, and an admin portal. As technology partner, I designed and built all of it, keeping running costs close to zero.</p>
+<dl class="cs-facts"><div><dt>Role</dt><dd>Technology partner: design, build and run</dd></div><div><dt>Area</dt><dd>Navi Mumbai</dd></div><div><dt>Apps</dt><dd>Customer, operations, admin, website</dd></div><div><dt>Since</dt><dd>April 2026</dd></div></dl>
+</div>
+<div class="cs-hero-art cs-tile tile-teal" aria-hidden="true"><strong>Pickup → doorstep</strong><span>booking, riders, facility and delivery in one system</span></div>
+</header>
+<div class="cs-stats"><div class="cs-stat"><b>4</b><span>apps: customer, operations, admin portal and website</span></div><div class="cs-stat"><b>10</b><span>order states tracked from booking to delivery</span></div><div class="cs-stat"><b>5</b><span>roles: customer, rider, facility staff, operator, admin</span></div><div class="cs-stat"><b>₹0</b><span>map billing: OpenStreetMap instead of paid maps</span></div></div>
+<div class="cs-body">
+<section class="cs-section" id="problem"><h2>The problem</h2><p>Laundry and dry cleaning in most neighbourhoods still runs on phone calls and paper slips. Customers don’t know when a rider will come, what a garment will cost, or when it will be back. The business can’t see which orders are late or which customers have stopped ordering.</p><p>Presso24 wanted to launch a service that felt as simple as ordering food: pick a slot, hand over the bag, track it, get it back. That meant building every piece, not just a customer app.</p></section><section class="cs-section" id="constraints"><h2>What made it hard</h2><ul><li><b>Startup budget.</b> Hosting, maps, messaging and storage all had to cost little or nothing until order volume justified more.</li><li><b>Physical handovers.</b> Garments change hands twice (pickup and delivery), so each handover needed proof, and item counts had to match.</li><li><b>Weak mobile networks.</b> Riders upload photos from building lobbies and basements with poor signal.</li><li><b>One person in many roles.</b> In a small operation the same person may ride, process orders and manage the facility.</li></ul></section><section class="cs-section" id="approach"><h2>What I built</h2><ul><li><b>Customer app (Flutter, Android and iOS).</b> Slot booking per pincode, per-garment pricing, live order tracking, rewards (coins, referrals, scratch cards, streaks) and promo codes.</li><li><b>AI booking.</b> Customers can describe their order in text, voice or a photo, and an Anthropic Claude model turns it into a draft booking.</li><li><b>Operations app (Flutter).</b> Rider, facility and operator modules, with OTP-verified pickup and delivery. Pickup is blocked when item counts don’t match, and photo uploads queue offline until the network returns.</li><li><b>Automated dispatch.</b> A background worker reminds riders 30, 15 and 5 minutes before a slot, auto-assigns when due and escalates missed pickups.</li><li><b>Admin portal (Angular).</b> Prices for every service and garment, pickup slots, service zones, scheduled banners and reports.</li><li><b>.NET 10 API.</b> Minimal APIs with EF Core on PostgreSQL, SignalR for live updates, Razorpay with signature-checked webhooks, SMS and email OTP, and Google and Apple sign-in.</li><li><b>Low running cost.</b> Docker hosting, OpenStreetMap tiles instead of a paid maps API, and Firebase for push notifications.</li></ul></section><section class="cs-section" id="architecture"><h2>How it fits together</h2><ol class="cs-flow" aria-label="How it fits together"><li><b>Customer app</b><span>Book a pickup slot by tapping, typing, speaking or sending a photo</span></li><li><b>.NET 10 API</b><span>Orders, pricing, slots, payments, rewards and notifications</span></li><li><b>Operations app</b><span>Riders collect with OTP; facility staff process and update status</span></li><li><b>Admin portal</b><span>Prices, slots, zones, banners, promotions and reports</span></li><li><b>Delivery</b><span>Out for delivery, OTP check at the door, rewards credited</span></li></ol></section><section class="cs-section" id="hardening"><h2>Fixing what audits found</h2><p>I ran my own audits of the system and fixed what they found: the operations app was showing some failed requests as successful, role checks were missing on facility endpoints, and a public configuration endpoint exposed more than it should. Role policies, an allowlisted configuration endpoint and correct error handling are now in place.</p></section><section class="cs-section" id="results"><h2>Where it stands</h2><ul><li>The customer app is live on Google Play, with the operations app in daily use by the team.</li><li>The full order lifecycle runs in software: ten tracked order states, from booking to doorstep, with every handover verified.</li><li>Ad installs are attributed to first orders without collecting personal data, so marketing spend can be judged on real orders.</li><li>Older orders taken before the app were imported, so the full customer history is in one place.</li></ul></section>
+<section class="cs-section" id="stack"><h2>Technology</h2><div class="tag-list cs-stack"><span>Flutter</span><span>Dart</span><span>.NET 10</span><span>EF Core 10</span><span>PostgreSQL</span><span>SignalR</span><span>Angular 18</span><span>Next.js</span><span>Firebase</span><span>Razorpay</span><span>Anthropic Claude</span><span>OpenStreetMap</span><span>Docker</span><span>Azure Blob Storage</span></div></section>
+<p class="cs-note">Presso24 is a product I build and run as technology partner. Figures above describe the system; order volumes are not published here.</p>
+</div>
+</article>
+<section class="cs-cta clay">
+<div><span class="eyebrow">HAVE A SIMILAR PROBLEM?</span><h2>Planning an on-demand service app?</h2></div>
+<div class="cs-cta-actions"><a class="primary" href="https://wa.me/917710020095?text=Hi%20Harshal%2C%20I%20read%20the%20Presso24%20case%20study%20and%20want%20to%20discuss%20an%20on-demand%20app." target="_blank" rel="noopener noreferrer">Message me on WhatsApp</a><a class="secondary" href="mailto:harshalp@bit2sky.com?subject=Presso24: on-demand laundry%20-%20project%20enquiry">Email me</a></div>
+</section>
+<section class="cs-related"><h2>More case studies</h2><div class="cs-related-grid"><a class="cs-related-card" href="revora-ai-growth-platform"><span class="eyebrow">AI agents &amp; automation</span><strong>Revora: AI growth platform</strong><small>Multi-tenant .NET 10 platform: WhatsApp sales agent, retention, attribution, content and ads agents, all behind an approval centre.</small></a><a class="cs-related-card" href="ehr-residential-care"><span class="eyebrow">Healthcare</span><strong>EHR for residential care</strong><small>Multi-module EHR on ASP.NET Core, Angular and Azure: nursing assessments, care plans, shift records, automated reminders and audit trails.</small></a><a class="cs-related-card" href="template-authoring-performance"><span class="eyebrow">Enterprise platform</span><strong>Template authoring platform</strong><small>Angular 19 and .NET 8 authoring platform: drag-and-drop editing, rule engine, and ~60% faster large-template loads.</small></a></div></section>
+<footer><span>Harshal Patil · Case studies</span><span>Client names are withheld under NDA. Images are concept illustrations.</span><a href="#main">Back to top</a></footer>
+</main>
+</body>
+</html>

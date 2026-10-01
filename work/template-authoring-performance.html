@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Case Study: 60% Faster Template Loading with Angular 19 and .NET 8 | Harshal Patil</title>
+<meta name="description" content="How I rebuilt loading for a Big Four firm’s template authoring platform with incremental retrieval, multi-level lazy loading and Redis caching, cutting large-template load times by about 60%.">
+<link rel="canonical" href="https://harshal-r-patil.vercel.app/work/template-authoring-performance">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Harshal Patil">
+<meta name="theme-color" content="#243e53">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Harshal Patil">
+<meta property="og:url" content="https://harshal-r-patil.vercel.app/work/template-authoring-performance">
+<meta property="og:title" content="Case Study: 60% Faster Template Loading with Angular 19 and .NET 8 | Harshal Patil">
+<meta property="og:description" content="How I rebuilt loading for a Big Four firm’s template authoring platform with incremental retrieval, multi-level lazy loading and Redis caching, cutting large-template load times by about 60%.">
+<meta property="og:image" content="https://harshal-r-patil.vercel.app/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23243e53'/%3E%3Ctext x='12' y='44' font-family='Arial' font-size='34' font-weight='bold' fill='%23b5dddd'%3Ehp%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../studio.css">
+<link rel="stylesheet" href="../profile.css">
+<link rel="stylesheet" href="../casestudy.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Making a Big Four firm’s template editor about 60% faster on large templates", "description": "How I rebuilt loading for a Big Four firm’s template authoring platform with incremental retrieval, multi-level lazy loading and Redis caching, cutting large-template load times by about 60%.", "image": "https://harshal-r-patil.vercel.app/assets/og-image.jpg", "author": {"@type": "Person", "@id": "https://harshal-r-patil.vercel.app/#person", "name": "Harshal Patil", "url": "https://harshal-r-patil.vercel.app/"}, "publisher": {"@type": "Person", "@id": "https://harshal-r-patil.vercel.app/#person", "name": "Harshal Patil"}, "datePublished": "2026-10-01", "dateModified": "2026-10-01", "mainEntityOfPage": "https://harshal-r-patil.vercel.app/work/template-authoring-performance", "about": ["Angular performance", ".NET 8", "Redis caching", "lazy loading", "enterprise platform"], "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://harshal-r-patil.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Case studies", "item": "https://harshal-r-patil.vercel.app/work/"}, {"@type": "ListItem", "position": 3, "name": "Template authoring platform", "item": "https://harshal-r-patil.vercel.app/work/template-authoring-performance"}]}]}</script>
+</head>
+<body class="profile-v2 cs-page">
+<a class="skip" href="#main">Skip to content</a>
+<aside class="sidebar">
+<a class="brand" href="../" aria-label="Harshal Patil home">h<span>p</span></a>
+<div class="identity"><strong>Harshal Patil</strong><span>Engineer. Builder. Co-founder.</span></div>
+<nav aria-label="Profile">
+<a href="../"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-8H9v8H4a1 1 0 0 1-1-1z"/></svg></span>Overview</a>
+<a class="active" aria-current="page" href="./"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3H5v18h14V9zm0 0v6h6M8 13h8m-8 4h6"/></svg></span>Case studies</a>
+<a href="../gallery"><span aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/></svg></span>Gallery</a>
+<a href="../#contact"><span aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>Let’s talk</a>
+</nav>
+<div class="sidebar-note">
+<span class="tiny-label">BASED IN MUMBAI, INDIA</span>
+<p>From a business problem<br>to a running product.</p>
+<a href="../assets/harshal-patil-cv.pdf" download="Harshal-Patil-CV.pdf" class="sidebar-cv"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg></span>Download my CV</a>
+</div>
+</aside>
+<main id="main">
+<nav class="cs-crumbs" aria-label="Breadcrumb"><a href="../">Home</a><span aria-hidden="true">/</span><a href="./">Case studies</a><span aria-hidden="true">/</span><span aria-current="page">Template authoring platform</span></nav>
+<article class="cs-article">
+<header class="cs-hero clay">
+<div class="cs-hero-copy">
+<span class="eyebrow">ENTERPRISE PLATFORM · CASE STUDY</span>
+<h1>Making a Big Four firm’s template editor about 60% faster on large templates</h1>
+<p class="cs-lede">Consultants at a Big Four advisory firm build long, deeply nested templates. The bigger the template, the slower the editor became. I rebuilt how templates load and are cached, and large templates now open about 60% faster.</p>
+<dl class="cs-facts"><div><dt>Client</dt><dd>Big Four advisory firm (NDA)</dd></div><div><dt>Role</dt><dd>Full-stack engineer</dd></div><div><dt>Platform</dt><dd>Cloud, on Azure</dd></div><div><dt>Scope</dt><dd>Editor, APIs, performance</dd></div></dl>
+</div>
+<div class="cs-hero-art cs-tile tile-lilac" aria-hidden="true"><strong>~60% faster</strong><span>large-template loads</span></div>
+</header>
+<div class="cs-stats"><div class="cs-stat"><b>~60%</b><span>faster loading of large templates</span></div><div class="cs-stat"><b>3</b><span>nested levels: sections, subsections, questions</span></div><div class="cs-stat"><b>2</b><span>synchronised views: canvas and tree</span></div></div>
+<div class="cs-body">
+<section class="cs-section" id="problem"><h2>The problem</h2><p>The platform lets advisory teams build structured templates: sections, subsections and questions, with reusable content blocks and rules that show or hide parts of a template. Templates in real use are long and deeply nested.</p><p>Opening a large template meant fetching and drawing the whole hierarchy before the author could start work. Editing felt heavy, and the problem grew with every section added. For a tool people use all day, that wait was the most visible issue.</p></section><section class="cs-section" id="constraints"><h2>What made it hard</h2><ul><li><b>Two views of one structure.</b> A drag-and-drop canvas and a tree view had to stay in sync while only part of the data was loaded.</li><li><b>Rules across the hierarchy.</b> The rule engine references questions in other sections, so partial loading could not break rule evaluation.</li><li><b>No disruption.</b> Authors were using the platform throughout; changes had to ship without a freeze or data migration risk.</li></ul></section><section class="cs-section" id="approach"><h2>What I built</h2><ul><li><b>Incremental retrieval.</b> APIs return one level of the hierarchy at a time instead of the whole template, so the first screen needs only a fraction of the data.</li><li><b>Multi-level lazy loading.</b> The Angular editor loads subsections and questions as the author expands or scrolls to them, in both the canvas and the tree view.</li><li><b>Redis caching.</b> Frequently opened templates and reusable content blocks are served from Redis instead of rebuilt from SQL Server on every request.</li><li><b>Full editing workflow.</b> Create, copy, update, delete and reorder across all levels, with drag and drop on the canvas mirrored in the tree, plus comments and standalone view modes.</li><li><b>Cloud integration.</b> Azure Functions for background workflows, Key Vault for secrets and Blob Storage for files.</li></ul></section><section class="cs-section" id="architecture"><h2>How it fits together</h2><ol class="cs-flow" aria-label="How it fits together"><li><b>Angular 19 editor</b><span>Canvas and tree view, loading only what is on screen</span></li><li><b>.NET 8 APIs</b><span>Return one level of the hierarchy at a time</span></li><li><b>Redis cache</b><span>Serves frequently opened templates without hitting SQL</span></li><li><b>SQL Server</b><span>Stores the template hierarchy and reusable blocks</span></li><li><b>Azure Functions</b><span>Run heavy background work outside the request</span></li></ol></section><section class="cs-section" id="results"><h2>The result</h2><ul><li><b>About 60% faster</b> loading for large templates, measured on the client’s own templates.</li><li>The editor stays responsive as templates grow, because the work done on open no longer scales with template size.</li><li>Lower database load on busy days, since repeat opens are served from cache.</li></ul></section>
+<section class="cs-section" id="stack"><h2>Technology</h2><div class="tag-list cs-stack"><span>Angular 19</span><span>TypeScript</span><span>.NET 8</span><span>ASP.NET Core Web API</span><span>EF Core</span><span>SQL Server</span><span>Redis</span><span>Azure Functions</span><span>Azure Key Vault</span><span>Azure Blob Storage</span></div></section>
+<p class="cs-note">Client name withheld under NDA. The 60% figure is from the project’s own before-and-after measurement.</p>
+</div>
+</article>
+<section class="cs-cta clay">
+<div><span class="eyebrow">HAVE A SIMILAR PROBLEM?</span><h2>Is your Angular or .NET app getting slower as data grows?</h2></div>
+<div class="cs-cta-actions"><a class="primary" href="https://wa.me/917710020095?text=Hi%20Harshal%2C%20I%20read%20the%20template%20platform%20case%20study.%20Our%20app%20has%20a%20performance%20problem%20I%27d%20like%20to%20discuss." target="_blank" rel="noopener noreferrer">Message me on WhatsApp</a><a class="secondary" href="mailto:harshalp@bit2sky.com?subject=Template authoring platform%20-%20project%20enquiry">Email me</a></div>
+</section>
+<section class="cs-related"><h2>More case studies</h2><div class="cs-related-grid"><a class="cs-related-card" href="revora-ai-growth-platform"><span class="eyebrow">AI agents &amp; automation</span><strong>Revora: AI growth platform</strong><small>Multi-tenant .NET 10 platform: WhatsApp sales agent, retention, attribution, content and ads agents, all behind an approval centre.</small></a><a class="cs-related-card" href="ehr-residential-care"><span class="eyebrow">Healthcare</span><strong>EHR for residential care</strong><small>Multi-module EHR on ASP.NET Core, Angular and Azure: nursing assessments, care plans, shift records, automated reminders and audit trails.</small></a><a class="cs-related-card" href="presso24-laundry-app"><span class="eyebrow">Consumer product</span><strong>Presso24: on-demand laundry</strong><small>Flutter customer and operations apps, Angular admin and a .NET 10 API, covering every step from pickup slot to delivery OTP.</small></a></div></section>
+<footer><span>Harshal Patil · Case studies</span><span>Client names are withheld under NDA. Images are concept illustrations.</span><a href="#main">Back to top</a></footer>
+</main>
+</body>
+</html>

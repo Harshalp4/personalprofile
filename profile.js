@@ -26,7 +26,7 @@ document.querySelectorAll('[data-project]').forEach(button=>button.addEventListe
  const visual=document.querySelector('#project-visual');visual.hidden=!p.image;
  if(p.image){const img=visual.querySelector('img');img.src='assets/projects/'+p.image+'.webp';img.alt=p.imageAlt;}
  document.querySelector('#project-points').replaceChildren(...elements('li',p.points));
- document.querySelector('#project-tags').replaceChildren(...elements('span',p.tags));dialog.showModal();dialog.scrollTop=0;
+ document.querySelector('#project-tags').replaceChildren(...elements('span',p.tags));{const cs=document.querySelector('#project-case');if(cs){cs.hidden=!p.caseStudy;if(p.caseStudy)cs.href=p.caseStudy;}}dialog.showModal();dialog.scrollTop=0;
 }));
 const cvDialog=document.querySelector('#cv-dialog');
 document.querySelector('#preview-cv').addEventListener('click',()=>{

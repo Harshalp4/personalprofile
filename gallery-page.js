@@ -7,6 +7,7 @@ const paths={
  grid:'<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
  gallery:'<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>',
  journey:'<circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h9a4 4 0 0 1 0 8H8a3 3 0 0 0 0 6h9"/>',
+ file:'<path d="M13 3H5v18h14V9zm0 0v6h6M8 13h8m-8 4h6"/>',
  mail:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/>',
  download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>'
 };
@@ -50,7 +51,9 @@ for(const [id,groups,category,image,tile] of catalogue){
  const tags=document.createElement('div');tags.className='tag-list';tags.append(...(p.cardTags||p.tags.slice(0,3)).map(t=>{const s=document.createElement('span');s.textContent=t;return s}));
  const btn=document.createElement('button');btn.className='gallery-open';btn.dataset.project=id;btn.setAttribute('aria-label','View '+p.title+' details');
  btn.innerHTML='<span>View project details</span><span aria-hidden="true">+</span>';
- copy.append(cat,h,d,tags,btn);card.append(fig,copy);grid.append(card);
+ copy.append(cat,h,d,tags);
+ if(p.caseStudy){const a=document.createElement('a');a.className='gallery-case-link';a.href=p.caseStudy;a.textContent='Read the case study →';copy.append(a);}
+ copy.append(btn);card.append(fig,copy);grid.append(card);
 }
 
 const count=document.getElementById('gallery-total');
@@ -75,7 +78,7 @@ grid.addEventListener('click',e=>{
  const visual=document.querySelector('#project-visual');const src=entry[3]||(p.image&&'assets/projects/'+p.image+'.webp');visual.hidden=!src;
  if(src){const img=visual.querySelector('img');img.src=src;img.alt=p.imageAlt||'';}
  document.querySelector('#project-points').replaceChildren(...elements('li',p.points));
- document.querySelector('#project-tags').replaceChildren(...elements('span',p.tags));dialog.showModal();dialog.scrollTop=0;
+ document.querySelector('#project-tags').replaceChildren(...elements('span',p.tags));{const cs=document.querySelector('#project-case');cs.hidden=!p.caseStudy;if(p.caseStudy)cs.href=p.caseStudy;}dialog.showModal();dialog.scrollTop=0;
 });
 dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()});

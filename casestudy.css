@@ -1,0 +1,65 @@
+/* Case-study pages (work/*.html) */
+.cs-page main{max-width:1180px}
+.cs-crumbs{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted);margin-bottom:18px}
+.cs-crumbs a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.cs-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:30px;padding:34px;align-items:center;border-radius:30px}
+.cs-hero h1{font-size:clamp(28px,3.4vw,44px);line-height:1.12;letter-spacing:-.035em;margin:14px 0 16px;max-width:none;color:var(--ink)}
+.cs-status{display:inline-block;margin-left:10px;font-size:10px;padding:5px 9px;background:#f3e5c9e8;border:1px solid #fff4dd;border-radius:8px;color:#5b503c;vertical-align:middle}
+.cs-lede{font-size:17px;line-height:1.65;color:var(--muted);margin:0;max-width:640px}
+.cs-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;margin:24px 0 0}
+.cs-facts div{border-top:1px solid #b8cfd7;padding-top:9px}
+.cs-facts dt{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:#487480;font-weight:700}
+.cs-facts dd{margin:4px 0 0;font-size:14px;color:var(--ink)}
+.cs-hero-art{margin:0;border-radius:22px;overflow:hidden;position:relative;aspect-ratio:3/2;background:#d9e8ed}
+.cs-hero-art img{width:100%;height:100%;object-fit:cover;display:block}
+.cs-hero-art figcaption{position:absolute;left:12px;bottom:11px;font-size:9px;letter-spacing:.9px;text-transform:uppercase;padding:4px 7px;border-radius:6px;background:#edf5f4d9;color:#486271}
+.cs-tile{display:flex;flex-direction:column;justify-content:center;gap:8px;padding:28px}
+.cs-tile strong{font-size:clamp(30px,3.6vw,48px);letter-spacing:-.04em;line-height:1.05;color:#1f3b4d}
+.cs-tile span{font-size:14px;color:#2f5566}
+.tile-teal{background:linear-gradient(150deg,#b9d7dc,#86aebb)}
+.tile-lilac{background:linear-gradient(150deg,#cfd2ea,#a5aacd)}
+.tile-sand{background:linear-gradient(150deg,#f0e4c8,#d6c29a)}
+.cs-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin:24px 0 8px}
+.cs-stat{padding:20px 22px;border-radius:20px;background:linear-gradient(155deg,#edf5f7,#dae8ed);border:1px solid #f7fcfdd9;box-shadow:0 5px 12px #53798716}
+.cs-stat b{display:block;font-size:30px;letter-spacing:-.03em;color:var(--teal);line-height:1.1}
+.cs-stat span{display:block;font-size:13px;color:var(--muted);margin-top:6px;line-height:1.45}
+.cs-body{max-width:780px;margin:0 auto;padding:18px 4px 10px}
+.cs-section{margin-top:40px}
+.cs-section h2{font-size:clamp(23px,2.4vw,30px);letter-spacing:-.03em;margin:0 0 14px;color:var(--ink)}
+.cs-section p{font-size:16px;line-height:1.8;color:#34505f;margin:0 0 14px}
+.cs-section ul{margin:4px 0 0;padding-left:20px}
+.cs-section li{font-size:16px;line-height:1.75;color:#34505f;margin-bottom:12px}
+.cs-section li b{color:var(--ink)}
+.cs-flow{list-style:none;padding:0!important;margin:8px 0 0;display:grid;gap:12px;counter-reset:step}
+.cs-flow li{counter-increment:step;position:relative;margin:0;padding:15px 18px 15px 58px;border-radius:16px;background:#e5eff2;border:1px solid #c6d9e0}
+.cs-flow li::before{content:counter(step);position:absolute;left:16px;top:14px;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:13px;font-weight:700}
+.cs-flow li:not(:last-child)::after{content:"";position:absolute;left:29px;bottom:-13px;width:2px;height:12px;background:#9fbac4}
+.cs-flow b{display:block;font-size:15px;color:var(--ink)}
+.cs-flow span{display:block;font-size:14px;color:var(--muted);line-height:1.55;margin-top:2px}
+.cs-stack span{font-size:12px}
+.cs-note{font-size:12px;color:var(--muted);margin:30px 0 0;padding-top:14px;border-top:1px solid #b8cfd7}
+.cs-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:44px;padding:30px 34px;border-radius:26px}
+.cs-cta h2{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.03em;margin-top:8px}
+.cs-cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+.cs-cta-actions a{min-height:46px;display:inline-flex;align-items:center}
+.cs-related{margin-top:40px}
+.cs-related h2{font-size:22px;margin-bottom:16px}
+.cs-related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cs-related-card{display:flex;flex-direction:column;gap:8px;padding:20px;border-radius:20px;background:linear-gradient(155deg,#edf5f7,#dae8ed);border:1px solid #f7fcfdd9;color:inherit;text-decoration:none;transition:transform .2s ease}
+.cs-related-card:hover,.cs-related-card:focus-visible{transform:translateY(-2px)}
+.cs-related-card strong{font-size:17px;color:var(--ink)}
+.cs-related-card small{font-size:13px;color:var(--muted);line-height:1.5}
+.cs-index-head{margin-bottom:26px}
+.cs-index-head h1{font-size:clamp(30px,3.6vw,46px);letter-spacing:-.035em;margin:10px 0 12px;max-width:none}
+.cs-index-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.cs-index-card{display:flex;flex-direction:column;overflow:hidden;border-radius:24px;color:inherit;text-decoration:none;transition:transform .2s ease}
+.cs-index-card:hover,.cs-index-card:focus-visible{transform:translateY(-3px)}
+.cs-index-card figure,.cs-card-tile{margin:0;aspect-ratio:16/9;overflow:hidden}
+.cs-index-card img{width:100%;height:100%;object-fit:cover;display:block}
+.cs-index-card>div:last-child{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px}
+.cs-index-card h2{font-size:22px;letter-spacing:-.03em;margin:0}
+.cs-index-card p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+.cs-read{font-size:13px;font-weight:700;color:var(--teal);margin-top:4px}
+@media(max-width:900px){.cs-hero{grid-template-columns:1fr;padding:24px}.cs-related-grid,.cs-index-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.cs-hero{padding:20px;border-radius:24px}.cs-facts{grid-template-columns:1fr 1fr;gap:12px 14px}.cs-lede{font-size:16px}.cs-section p,.cs-section li{font-size:15px}.cs-cta{padding:24px 20px}.cs-cta-actions{width:100%}.cs-cta-actions a{flex:1;justify-content:center}.cs-stat b{font-size:26px}.cs-status{display:block;margin:8px 0 0;width:max-content}}
+.cs-page header.cs-index-head{display:block}.cs-index-head .cs-lede{margin-top:4px}

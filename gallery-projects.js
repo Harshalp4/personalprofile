@@ -22,6 +22,7 @@ export const galleryProjects = {
     cardTags: ['.NET', 'Angular', 'SQL Server']
   },
   ehr: {
+    caseStudy: 'work/ehr-residential-care',
     title: 'Electronic health records',
     category: 'Healthcare & care teams', type: 'Enterprise project · clinical workflows',
     image: 'health-records', imageAlt: 'Clay medical record folder, signature pen, message bubble, and lock',
