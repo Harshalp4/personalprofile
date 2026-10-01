@@ -79,7 +79,7 @@ def seo_files():
 ## Working together
 - Location: Mumbai, India (IST). Overlaps US East Coast mornings and the UK/EU working day.
 - Engagements: hourly or fixed milestones; team delivery through Bit2Sky India; US contracting through Bit2Sky Inc. USA.
-- Contact: harshal.rpatil5@gmail.com, +91 84548 26644 (WhatsApp)
+- Contact: harshalp@bit2sky.com, +91 77100 20095 (WhatsApp)
 
 ## Pages
 - [Profile]({SITE}/)
