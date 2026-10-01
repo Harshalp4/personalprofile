@@ -24,7 +24,7 @@ document.querySelectorAll('[data-project]').forEach(button=>button.addEventListe
  const p=projects[button.dataset.project];
  setText('project-title',p.title);setText('project-type',p.type);setText('project-body',p.intro);setText('project-outcome',p.outcome||p.scope||'');
  const visual=document.querySelector('#project-visual');visual.hidden=!p.image;
- if(p.image){const img=visual.querySelector('img');img.src='assets/projects/'+p.image+'.png';img.alt=p.imageAlt;}
+ if(p.image){const img=visual.querySelector('img');img.src='assets/projects/'+p.image+'.webp';img.alt=p.imageAlt;}
  document.querySelector('#project-points').replaceChildren(...elements('li',p.points));
  document.querySelector('#project-tags').replaceChildren(...elements('span',p.tags));dialog.showModal();dialog.scrollTop=0;
 }));

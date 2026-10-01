@@ -1,0 +1,28 @@
+# Harshal Patil
+
+> Freelance .NET, Azure, Angular, Flutter and AI agent developer based in Mumbai, India. Solution engineer and two-time co-founder, building software since 2012.
+
+## Services
+- AI agents and automation: LLM agents with tool calling, human approval steps, audit logs and cost tracking, connected to WhatsApp, Meta and Google.
+- Product and MVP builds: ASP.NET Core APIs, Angular web apps, Flutter mobile apps, deployed with CI/CD.
+- Legacy modernization: .NET Framework and ASP.NET to .NET 8+ and Azure, step by step.
+- Performance fixes for slow APIs, SQL Server and EF Core queries.
+- Document intelligence with Azure AI Document Intelligence and Azure AI Search.
+- Architecture reviews and team extension.
+
+## Selected work
+- Revora: multi-tenant AI growth platform for local service businesses (.NET 10, Angular 22, PostgreSQL, LLM agents, WhatsApp). In rollout, 2026.
+- Loan application platform: web-based lending workflow for a lending client (.NET, Angular, SQL Server, Azure). In development.
+- Presso24: on-demand laundry app in Navi Mumbai (Flutter, .NET, Azure). 150+ orders a month, 80% repeat rate.
+- Template authoring platform for a Big Four firm (Angular 19, .NET 8, Redis). About 60% faster large-template loads.
+- Also: electronic health records, cloud migration management, event-driven ETL, enterprise search, AI medical scribing, on-device face recognition, edge AI vision, and document management for HAL, Pune Municipal Corporation, MDIndia and EMH Cranes.
+
+## Working together
+- Location: Mumbai, India (IST). Overlaps US East Coast mornings and the UK/EU working day.
+- Engagements: hourly or fixed milestones; team delivery through Bit2Sky India; US contracting through Bit2Sky Inc. USA.
+- Contact: harshal.rpatil5@gmail.com, +91 84548 26644 (WhatsApp)
+
+## Pages
+- [Profile](https://personalprofile-two.vercel.app/)
+- [Project gallery](https://personalprofile-two.vercel.app/gallery)
+- [CV (PDF)](https://personalprofile-two.vercel.app/assets/harshal-patil-cv.pdf)

@@ -16,7 +16,7 @@ function addMessage(role, text, answer = null, welcome = false) {
   article.append(speaker);
   if (welcome) {
     const img = document.createElement('img');
-    img.src = 'assets/profile-guide.png'; img.alt = 'A friendly clay robot waves hello';
+    img.src = 'assets/profile-guide.webp'; img.alt = 'A friendly clay robot waves hello';
     img.width = 94; img.height = 94; img.className = 'chat-welcome-art'; article.append(img);
   }
   const p = document.createElement('p'); p.textContent = text; article.append(p);

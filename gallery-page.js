@@ -14,7 +14,7 @@ document.querySelectorAll('[data-icon]').forEach(el=>{el.innerHTML='<svg viewBox
 
 // Display order and filter groups for every project.
 const catalogue=[
- ['revora',['ai'],'AI agents & automation','assets/revora-agents.png'],
+ ['revora',['ai'],'AI agents & automation','assets/revora-agents.webp'],
  ['lending',['fintech'],null,null],
  ['presso',['mobile'],'Consumer product',null,['150+ orders / month','80% repeat rate · live on iOS & Android','tile-teal']],
  ['authoring',['enterprise'],'Enterprise platform',null,['~60% faster','large-template loads · Big Four firm','tile-lilac']],
@@ -37,7 +37,7 @@ for(const [id,groups,category,image,tile] of catalogue){
  const p=projects[id];
  const card=document.createElement('article');
  card.className='gallery-card';card.dataset.groups=groups.join(' ');
- const img=image||(p.image&&'assets/projects/'+p.image+'.png');
+ const img=image||(p.image&&'assets/projects/'+p.image+'.webp');
  const fig=document.createElement('figure');fig.className='gallery-visual';
  if(img){const i=document.createElement('img');i.src=img;i.alt=p.imageAlt||'';i.width=1536;i.height=1024;i.loading='lazy';i.decoding='async';fig.append(i);
   const c=document.createElement('figcaption');c.textContent='Concept illustration';fig.append(c);}
@@ -72,7 +72,7 @@ grid.addEventListener('click',e=>{
  const button=e.target.closest('[data-project]');if(!button)return;
  const p=projects[button.dataset.project];const entry=catalogue.find(c=>c[0]===button.dataset.project);
  setText('project-title',p.title);setText('project-type',p.type);setText('project-body',p.intro);setText('project-outcome',p.outcome||p.scope||'');
- const visual=document.querySelector('#project-visual');const src=entry[3]||(p.image&&'assets/projects/'+p.image+'.png');visual.hidden=!src;
+ const visual=document.querySelector('#project-visual');const src=entry[3]||(p.image&&'assets/projects/'+p.image+'.webp');visual.hidden=!src;
  if(src){const img=visual.querySelector('img');img.src=src;img.alt=p.imageAlt||'';}
  document.querySelector('#project-points').replaceChildren(...elements('li',p.points));
  document.querySelector('#project-tags').replaceChildren(...elements('span',p.tags));dialog.showModal();dialog.scrollTop=0;
