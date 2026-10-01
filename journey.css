@@ -1,0 +1,85 @@
+/* Keep the original avatar in its own column, with room for subtle motion. */
+.profile-v2 .hero{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:12px}
+.profile-v2 .hero-copy{min-width:0;position:relative;z-index:1;padding-right:8px}
+.profile-v2 .hero h2{font-size:clamp(56px,5.25vw,76px)}
+.profile-v2 .avatar-art{position:relative;min-width:0;padding:30px 20px 45px 0;display:flex;align-items:center;justify-content:center;perspective:900px;overflow:hidden}
+.avatar-float{width:100%;animation:avatar-breathe 6s ease-in-out infinite;animation-play-state:paused;transform-origin:50% 75%}
+.avatar-art[data-moving="true"] .avatar-float{animation-play-state:running}
+.avatar-parallax{transform:rotateX(var(--avatar-x,0deg)) rotateY(var(--avatar-y,0deg));transition:transform .3s ease-out;border-radius:30px;overflow:hidden;box-shadow:0 10px 24px #3c627415;isolation:isolate}
+.profile-v2 .avatar-art img{display:block;width:100%;height:auto;max-height:none;margin:0;object-fit:contain;mix-blend-mode:multiply}
+.avatar-art .image-caption{bottom:17px;right:22px}
+@keyframes avatar-breathe{0%,100%{transform:translateY(0) rotate(-.25deg)}50%{transform:translateY(-7px) rotate(.25deg)}}
+
+.year-journey{padding:26px;overflow:hidden;border-radius:28px;min-width:0}
+.year-toolbar{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-bottom:22px;flex-wrap:wrap}
+.year-landmarks{display:flex;gap:8px;flex-wrap:wrap}
+.year-landmarks button{min-height:48px;padding:8px 13px;display:flex;flex-direction:column;gap:3px;align-items:flex-start;border-radius:12px;background:transparent;color:#466674;font:inherit;font-size:11px;text-align:left;cursor:pointer}
+.year-landmarks button>span{font-size:15px;line-height:1.2;font-weight:700;color:#294f60}
+.year-landmarks button:hover,.year-landmarks button.is-active{background:#c7dee3;box-shadow:inset 1px 1px 3px #acc5ce}
+.year-controls{display:flex;align-items:center;gap:8px}
+.year-controls button{min-width:44px;min-height:44px;border-radius:13px;background:#d5e5e9;color:#2f5968;cursor:pointer;font-size:18px}
+.year-controls #journey-play{padding:12px 17px;background:#2e6e7a;color:#f1f9f9;font-size:12px;font-weight:700;min-width:120px;box-shadow:3px 4px 9px #91b2bd80}
+.year-controls button:disabled{opacity:.38;cursor:default}
+.year-stage{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:center;min-height:365px;border-radius:22px}
+.year-visual{position:relative;margin:0;background:#ccdee5;border:1px solid #edf6f7;border-radius:22px;overflow:hidden;min-width:0;aspect-ratio:1.28}
+.year-visual img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;display:block}
+.year-visual figcaption{position:absolute;bottom:12px;left:13px;background:#ecf4f5d9;padding:5px 8px;border-radius:7px;font-size:10px;color:#54717d}
+.year-copy{padding:14px 8px 14px 0;min-width:0}
+.year-number{font-size:clamp(56px,6vw,82px);font-weight:700;letter-spacing:-5px;line-height:1;color:#337582;font-variant-numeric:tabular-nums;margin-bottom:16px}
+.year-copy .eyebrow{font-size:10px}
+.year-copy h3{font-size:30px;line-height:1.17;letter-spacing:-.04em;margin:10px 0 14px}
+.year-copy>p{font-size:15px;color:#4a6776;line-height:1.65;max-width:490px}
+.year-copy .tag-list{margin:15px 0}
+.year-action{display:inline-flex;align-items:center;min-height:44px;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:5px;color:#316879}
+.year-context{margin:16px 0 5px;border-left:2px solid #92b8c3;padding-left:13px}
+.year-context p{font-size:12px;color:#557584;margin:5px 0;line-height:1.5}
+.year-scrubber{padding:22px 4px 0}
+.year-progress{height:4px;border-radius:4px;background:#bbd2db;overflow:hidden;margin:0 8px 11px}
+.year-progress-fill{display:block;width:100%;height:100%;background:#387e88;transform:scaleX(0);transform-origin:left;transition:transform .6s ease}
+.year-rail{position:relative;display:flex;gap:4px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#8bb0bd transparent;padding:6px 4px 10px;scroll-padding-inline:12px}
+.year-stop{flex:1 0 56px;display:flex;flex-direction:column;align-items:center;gap:9px;min-height:61px;border-radius:12px;padding:9px 4px 7px;background:transparent;color:#54717f;font-size:11px;font-weight:600;cursor:pointer}
+.year-stop-dot{width:9px;height:9px;border:1.5px solid #799fab;border-radius:50%;background:#dfedf0}
+.year-stop.has-milestone .year-stop-dot{background:#588b98;border-color:#588b98;box-shadow:0 0 0 3px #c7dce3}
+.year-stop.visited .year-stop-dot{background:#85adb7}
+.year-stop[aria-selected="true"]{background:#337581;color:white;box-shadow:3px 4px 9px #a6c1cb}
+.year-stop[aria-selected="true"] .year-stop-dot{background:#eff9fa;border-color:#eff9fa;box-shadow:none}
+.year-stop:hover:not([aria-selected="true"]){background:#cfe3e8}
+.year-bottom{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-top:11px;color:#486b7b;font-size:12px}
+.year-bottom label{display:flex;align-items:center;gap:10px}
+.year-bottom select{font:inherit;font-size:12px;min-height:44px;max-width:205px;border:1px solid #a9c5d0;border-radius:11px;padding:8px 30px 8px 10px;background:#e8f1f3;color:#31596b;cursor:pointer}
+.year-bottom [role="status"]{font-variant-numeric:tabular-nums}
+.year-note{font-size:11px;color:#577480;line-height:1.5;margin:16px 4px 0;border-top:1px solid #c0d5dd;padding-top:15px}
+.career-focus{margin-top:18px}
+.career-focus>summary{min-height:48px;display:flex;justify-content:space-between;align-items:center;padding:12px 5px;color:#456a7a;font-size:13px;font-weight:600;cursor:pointer;list-style:none}
+.career-focus>summary::-webkit-details-marker{display:none}
+.career-focus>summary>span{font-size:21px}
+.career-focus[open]>summary>span{transform:rotate(45deg)}
+.career-focus .journey-shell{padding-top:3px}
+.company-since{display:inline-block;color:#356775;background:#c6dfe3;border-radius:7px;padding:5px 8px;margin:0 0 11px;font-size:11px;font-weight:600}
+.year-journey :focus-visible{outline:3px solid #266782;outline-offset:3px}
+:root[data-motion="paused"] .avatar-float{animation-play-state:paused!important}
+:root[data-motion="paused"] .year-progress-fill,:root[data-motion="paused"] .avatar-parallax{transition:none}
+
+@media(max-width:1100px){.year-journey{padding:22px}.year-stage{gap:24px;grid-template-columns:.9fr 1fr;min-height:340px}.year-copy h3{font-size:26px}.year-copy>p{font-size:14px}.year-number{font-size:65px}.year-landmarks{gap:3px}.year-landmarks button{padding-inline:10px}.year-toolbar{gap:13px}.profile-v2 .hero h2{font-size:61px}.profile-v2 .avatar-art{padding-right:12px;padding-bottom:45px}}
+@media(max-width:800px){.year-stage{grid-template-columns:1fr;gap:15px;min-height:0}.year-visual{aspect-ratio:2.1}.year-visual img{object-fit:contain}.year-copy{padding:10px 4px;min-height:280px}.year-copy h3{font-size:29px}.year-copy>p{font-size:15px}.year-number{font-size:65px}.year-toolbar{justify-content:center}.year-landmarks{width:100%;justify-content:space-between}.year-landmarks button{flex:1;text-align:center;align-items:center}.year-controls{width:100%;justify-content:space-between}.year-controls #journey-play{min-width:160px}.year-stop{flex-basis:57px}.profile-v2 .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.profile-v2 .hero h2{font-size:56px}}
+@media(max-width:600px){
+  .profile-v2 header{gap:8px}.profile-v2 h1{font-size:17px}.profile-v2 header .eyebrow{font-size:9px;letter-spacing:1px}
+  .profile-v2 .hero{display:flex;gap:0}.profile-v2 .hero-copy{padding:26px 25px 0}.profile-v2 .hero h2{font-size:62px;line-height:1.03}
+  .profile-v2 .avatar-art{width:100%;height:auto;padding:18px 12px 35px;margin-top:0;min-height:0}
+  .profile-v2 .avatar-art img{width:100%;height:auto;margin:0;max-height:none}
+  .avatar-parallax{border-radius:23px}.avatar-art .image-caption{bottom:8px;right:17px;font-size:9px}
+  .year-journey{padding:18px 15px;border-radius:24px}.year-toolbar{gap:15px;margin-bottom:19px}
+  .year-landmarks button{font-size:10px;padding:7px 6px;min-height:48px}.year-landmarks button>span{font-size:15px}
+  .year-visual{aspect-ratio:1.6;border-radius:17px}.year-copy{padding:10px 5px;min-height:330px}.year-number{font-size:64px;letter-spacing:-4px;margin-bottom:14px}
+  .year-copy h3{font-size:28px}.year-copy>p{font-size:15px}.year-copy .eyebrow{font-size:9px}.year-scrubber{padding:10px 0 0}.year-bottom{gap:10px;font-size:11px}.year-bottom label{gap:8px}.year-bottom select{max-width:162px;font-size:16px;padding-right:24px}
+  .year-note{margin-inline:2px;font-size:11px}.year-stage{gap:10px}.career-focus>summary{font-size:12px}
+  .chat-launcher{right:15px;bottom:calc(91px + env(safe-area-inset-bottom));padding:5px;min-width:54px;min-height:54px;justify-content:center;border-radius:19px}
+  .chat-launcher>span{display:none}.chat-launcher img{width:44px;height:44px}.sidebar{bottom:calc(10px + env(safe-area-inset-bottom))}
+  .profile-v2 main{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+}
+@media(max-width:360px){.profile-v2 .hero h2{font-size:56px}.profile-v2 .hero-copy{padding-inline:20px}.profile-v2 .badge{font-size:8px}.year-landmarks button{font-size:9px}.year-bottom{align-items:flex-start;flex-direction:column}.year-copy h3{font-size:25px}.year-controls #journey-play{min-width:145px}}
+@media(prefers-reduced-motion:reduce){.avatar-float{animation:none!important}.avatar-parallax{transform:none!important;transition:none!important}.year-progress-fill{transition:none}}
+
+:root[data-motion="paused"]{scroll-behavior:auto}
+@media(max-width:600px){.year-journey{display:flex;flex-direction:column}.year-toolbar{order:0}.year-scrubber{order:1;margin-bottom:19px}.year-stage{order:2}.year-note{order:3}}
+@media(max-width:600px){:root{scroll-behavior:auto}}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Gallery — Harshal Patil</title>
+<meta name="description" content="Projects by Harshal Patil since 2012: AI agents, lending, healthcare, cloud and data platforms, mobile apps and document systems.">
+<meta name="theme-color" content="#243e53">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Project Gallery — Harshal Patil">
+<meta property="og:description" content="AI agents, lending, healthcare, cloud, mobile and document systems built since 2012.">
+<meta property="og:image" content="assets/revora-agents.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23243e53'/%3E%3Ctext x='12' y='44' font-family='Arial' font-size='34' font-weight='bold' fill='%23b5dddd'%3Ehp%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="studio.css">
+<link rel="stylesheet" href="profile.css">
+<link rel="stylesheet" href="gallery.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+<body class="profile-v2 gallery-page">
+<a class="skip" href="#main">Skip to content</a>
+<aside class="sidebar">
+<a class="brand" href="index.html" aria-label="Harshal Patil home">h<span>p</span></a>
+<div class="identity"><strong>Harshal Patil</strong><span>Engineer. Builder. Co-founder.</span></div>
+<nav aria-label="Profile">
+<a href="index.html#overview"><span data-icon="home" aria-hidden="true"></span>Overview</a>
+<a href="index.html#work"><span data-icon="grid" aria-hidden="true"></span>Selected work</a>
+<a class="active" href="gallery.html" aria-current="page"><span data-icon="gallery" aria-hidden="true"></span>Gallery</a>
+<a href="index.html#journey"><span data-icon="journey" aria-hidden="true"></span>My journey</a>
+<a href="index.html#contact"><span data-icon="mail" aria-hidden="true"></span>Let’s talk</a>
+</nav>
+<div class="sidebar-note">
+<span class="tiny-label">BASED IN MUMBAI, INDIA</span>
+<p>From a business problem<br>to a running product.</p>
+<a href="assets/harshal-patil-cv.pdf" download="Harshal-Patil-CV.pdf" class="sidebar-cv"><span data-icon="download" aria-hidden="true"></span>Download my CV</a>
+</div>
+</aside>
+<main id="main">
+<header>
+<div>
+<span class="eyebrow">HARSHAL PATIL / PROJECT GALLERY</span>
+<h1>Everything I’ve built since 2012.</h1>
+</div>
+<div class="header-actions">
+<a class="subtle" href="index.html">← Back to profile</a>
+</div>
+</header>
+
+<section class="section gallery-hero">
+<p class="gallery-lede">Enterprise platforms, products I co-founded, and client builds across AI, lending, healthcare, cloud, mobile and document systems. Open any project for the scope and stack.</p>
+<div class="gallery-filters" role="group" aria-label="Filter projects">
+<button data-filter="all" aria-pressed="true">All</button>
+<button data-filter="ai" aria-pressed="false">AI &amp; agents</button>
+<button data-filter="fintech" aria-pressed="false">Fintech &amp; lending</button>
+<button data-filter="healthcare" aria-pressed="false">Healthcare</button>
+<button data-filter="cloud" aria-pressed="false">Cloud &amp; data</button>
+<button data-filter="mobile" aria-pressed="false">Mobile</button>
+<button data-filter="enterprise" aria-pressed="false">Enterprise apps</button>
+<button data-filter="documents" aria-pressed="false">Documents &amp; DMS</button>
+</div>
+<p class="gallery-total" aria-live="polite"><span id="gallery-total">16 projects</span></p>
+</section>
+
+<div class="gallery-grid gallery-page-grid" id="gallery-grid"></div>
+
+<section class="section digitization-clients gallery-clients">
+<span class="eyebrow">DOCUMENT-SYSTEMS EXPERIENCE ACROSS</span>
+<ul aria-label="Client organizations"><li>HAL</li><li>Pune Municipal Corporation</li><li>MDIndia</li><li>EMH Cranes</li></ul>
+</section>
+
+<section class="section contact clay gallery-cta">
+<div>
+<span class="eyebrow">HAVE A PROJECT LIKE THESE?</span>
+<h2>Let’s talk about what you’re building.</h2>
+<a class="primary" href="index.html#contact">Get in touch</a>
+</div>
+</section>
+
+<footer>
+<span>Harshal Patil · Project Gallery</span>
+<span>Images are concept illustrations, not production screenshots.</span>
+<a href="#main">Back to top</a>
+</footer>
+</main>
+<a class="whatsapp-float" href="https://wa.me/918454826644?text=Hi%20Harshal%21%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20project.%20Could%20we%20connect%20to%20talk%20about%20the%20scope%2C%20timeline%2C%20and%20how%20we%20can%20work%20together%3F" target="_blank" rel="noopener noreferrer" aria-label="Chat with Harshal on WhatsApp (opens in a new tab)" title="Discuss your project on WhatsApp">
+<img src="assets/whatsapp.svg" alt="" width="28" height="28">
+<span>Let’s talk<small>On WhatsApp</small></span>
+</a>
+
+<dialog id="project-dialog" aria-labelledby="project-title">
+<button class="close" aria-label="Close project details">×</button>
+<figure id="project-visual" hidden><img alt="" width="1536" height="1024"><figcaption>Concept illustration · not a production screenshot</figcaption></figure>
+<span class="eyebrow" id="project-type">PROJECT SNAPSHOT</span>
+<h2 id="project-title"></h2>
+<p id="project-body"></p>
+<ul id="project-points"></ul>
+<div class="project-outcome" id="project-outcome"></div>
+<div id="project-tags"></div>
+<a class="dialog-cv" href="assets/harshal-patil-cv.pdf" target="_blank" rel="noopener">Read the complete CV</a>
+</dialog>
+<script type="module" src="gallery-page.js"></script>
+<script type="module" src="project-deep-link.js"></script>
+</body>
+</html>
