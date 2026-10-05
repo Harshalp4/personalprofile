@@ -1,5 +1,4 @@
 /* Case-study pages (work/*.html) */
-.cs-page main{max-width:1180px}
 .cs-crumbs{display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--muted);margin-bottom:18px}
 .cs-crumbs a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
 .cs-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:30px;padding:34px;align-items:center;border-radius:30px}

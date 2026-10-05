@@ -74,7 +74,8 @@ def seo_files():
 - Loan application platform: web-based lending workflow for a lending client (.NET, Angular, SQL Server, Azure). In development.
 - Presso24: on-demand laundry app in Navi Mumbai (Flutter, .NET, Azure). 150+ orders a month, 80% repeat rate.
 - Template authoring platform for a Big Four firm (Angular 19, .NET 8, Redis). About 60% faster large-template loads.
-- Also: electronic health records, cloud migration management, event-driven ETL, enterprise search, AI medical scribing, on-device face recognition, edge AI vision, and document management for HAL, Pune Municipal Corporation, MDIndia and EMH Cranes.
+- EHR platform for US residential and behavioral care providers since 2019, with LabCorp-certified lab integration and electronic pharmacy refills.
+- Also: cloud migration management, event-driven ETL, enterprise search, AI medical scribing, on-device face recognition, edge AI vision, and document management for HAL, Pune Municipal Corporation, MDIndia and EMH Cranes.
 
 ## Working together
 - Location: Mumbai, India (IST). Overlaps US East Coast mornings and the UK/EU working day.
@@ -83,7 +84,7 @@ def seo_files():
 
 ## Case studies
 - [AI agent platform for local businesses (Revora)]({SITE}/work/revora-ai-growth-platform)
-- [EHR for a US residential care provider]({SITE}/work/ehr-residential-care)
+- [EHR platform for US care providers, with LabCorp-certified lab integration]({SITE}/work/ehr-residential-care)
 - [60% faster template loading for a Big Four firm]({SITE}/work/template-authoring-performance)
 - [Presso24 on-demand laundry app]({SITE}/work/presso24-laundry-app)
 

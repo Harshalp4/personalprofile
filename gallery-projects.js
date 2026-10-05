@@ -26,8 +26,8 @@ export const galleryProjects = {
     title: 'Electronic health records',
     category: 'Healthcare & care teams', type: 'Enterprise project · clinical workflows',
     image: 'health-records', imageAlt: 'Clay medical record folder, signature pen, message bubble, and lock',
-    intro: 'A multi-module EHR platform covering nursing care, assessments, e-signatures, and chat. Role-based access organizes how care teams use patient records and supporting workflows.',
-    points: ['Role-based access across a multi-module EHR application.', 'Nursing care and assessment workflows.', 'Electronic signatures and chat, built with Angular, ASP.NET Core, and Hangfire.'],
+    intro: 'An EHR platform used by US residential and behavioral care providers since 2019, replacing paper records with one system for client records, medications and clinical care, plus LabCorp-certified lab integration and electronic pharmacy refills.',
+    points: ['One record per person, with medications, daily care and incident reports.', 'Nursing assessments, care plans and behavioral plans with reminders before they fall overdue.', 'LabCorp-certified lab orders and results, and electronic pharmacy refills approved by nurses.'],
     scope: 'Clinical application modules and role-based workflows.',
     tags: ['Angular', 'ASP.NET Core', 'Hangfire'],
     cardTags: ['Angular', 'ASP.NET Core', 'Hangfire']
